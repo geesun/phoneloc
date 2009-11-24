@@ -150,7 +150,7 @@ getPhoneLocationJni( JNIEnv* env, jclass thiz, jstring phone ) {
     if (nphone[0] == '0') {
         if (nphone[1] == '1' || nphone[1] == '2') {
             nphone[3] = 0x00;
-        } else if (len > 4) {
+        } else if (len >= 4) {
             nphone[4] = 0x00;
         } else {
             return NULL;
